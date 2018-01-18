@@ -66,6 +66,7 @@ isequal(B * C, C * B)
 isequal(A * B, B * A)
 
 %% Uppg6
+clc, clear all, close all
 
 n = 9;
 ett = ones(n, 1);
