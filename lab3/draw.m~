@@ -1,0 +1,6 @@
+function draw(verts, inds)
+    for i=1:size(S,1)
+        Si=S(i,:); fill3(verts(1,Si),verts(2,Si),verts(3,Si),'g','facealpha',0.7);
+    end
+end
+
