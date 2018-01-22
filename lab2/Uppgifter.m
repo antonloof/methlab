@@ -70,7 +70,11 @@ clc, clear all, close all
 
 n = 9;
 ett = ones(n, 1);
-A = spdiags([-ett, 4*ett, -ett], [-1 0 1], n, n);
+A = spdiags([-ett, -ett, 4*ett, -ett, -ett], [-3, -1 0 1, 3], n, n);
+A(3, 4) = 0;
+A(4, 3) = 0;
+A(6, 7) = 0;
+A(7, 6) = 0;
 b = [20 + 80; 20; 20 + 100; 80; 0; 100; 80 + 40; 40; 40 + 100];
 rref([A b])
 
